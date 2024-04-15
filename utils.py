@@ -9,7 +9,6 @@ from pycocotools.coco import COCO
 from torchvision import datasets as datasets
 
 from config import cfg
-from log import logger
 
 
 def average_precision(output, target):

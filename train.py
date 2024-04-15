@@ -5,13 +5,30 @@ from typing import Tuple
 import torch
 from torch.cuda.amp import GradScaler, autocast  # type: ignore
 from torch.optim import lr_scheduler
-
-from log import logger
 from loss import SPLC
 from scpnet import SCPNetTrainer
 from utils import AverageMeter, add_weight_decay, mAP
 
 from config import cfg  # isort:skip
+
+import logging
+import sys
+
+cfg.log_file = f"{cfg.checkpoint}/{cfg.log_file}"
+
+logging.basicConfig(level=logging.INFO,
+                    format="%(asctime)s [%(levelname)s] %(message)s",
+                    handlers=[
+                        logging.FileHandler(cfg.log_file),
+                        logging.StreamHandler(sys.stdout)
+                    ])
+
+logger = logging.getLogger()
+
+if cfg.resume:
+    logger.info(f"Resume training... from {cfg.resume}")
+
+
 
 def save_best(trainer, if_ema_better: bool) -> None:
     if if_ema_better:
