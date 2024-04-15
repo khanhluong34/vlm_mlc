@@ -310,7 +310,7 @@ def add_weight_decay(model, weight_decay=1e-4, skip_list=()):
     no_decay = []
     gcn = []
     gcn_no_decay = []
-    prefix = "module." if torch.cuda.device_count() > 1 else "" 
+    prefix = "module." if torch.cuda.device_count() >= 1 else "" 
     for name, param in model.named_parameters():
         if not param.requires_grad:
             continue  # frozen weights
