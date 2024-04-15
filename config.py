@@ -7,7 +7,7 @@ from args import args
 # Base config
 base_cfg = OmegaConf.load('configs/base.yaml')
 
-config_file_path = f"/home/s/luongtk/SCPNet/configs/scpnet+{args.config_file}.yaml"
+config_file_path = f"/kaggle/working/vlm_mlc/configs/scpnet+{args.config_file}.yaml"
 
 # Main Config
 main_cfg = OmegaConf.load(config_file_path)
