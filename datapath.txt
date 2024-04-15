@@ -1,0 +1,2 @@
+data: /home/s/ducnq/spml-paper/data/pascal/VOCdevkit/
+data: /home/s/ducnq/spml-paper/data/cub/

@@ -1,0 +1,29 @@
+VOC
+model: ViT/B32
+- batch size: 32 
+    + base mAP: 90.72 (89.95M/128.08M)
+    + use Residual GNN (3x3 layers): 90.99
+- batch size: 48
+    + base mAP: 90.76
+    + use Residual GNN (3x3 layers): 91.1
+    + use Residual GNN (3x5 layers): 91.23
+model: RN50
+- batch size: 32
+    + base mAP: 90.41 (46.71M/85.10M)
+    + use Residual GNN (3x3 layers): 90.62 
+- batch size: 48
+    + base mAP: 90.45
+    + use Residual GNN (3x3 layers): 90.53
+    + use Residual GNN (3x5 layers): 90.57
+
+CUB
+model: ViT/B32 
+- batch size 32: 
+    + base mAP: 17.94
+
+model: RN50 
+
+COCO 
+model: ViT/B32 
+-batch size: 48
+    + base mAP: 
