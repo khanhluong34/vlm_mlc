@@ -8,7 +8,6 @@ from torch.cuda.amp import autocast  # type: ignore
 from torchvision import transforms
 
 from config import cfg
-from log import logger
 from model import SCPNet, load_clip_model
 from utils import COCO_missing_val_dataset, CocoDetection, ModelEma, get_ema_co
 
