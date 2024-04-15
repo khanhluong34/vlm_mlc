@@ -7,7 +7,6 @@ from torch.nn import functional as F
 from clip import clip
 from clip.simple_tokenizer import SimpleTokenizer as _Tokenizer
 from config import cfg
-from log import logger
 
 _tokenizer = _Tokenizer()
 
